@@ -1,1 +1,56 @@
-<p>totem works!</p>
+<div class="min-h-screen bg-gray-100 flex flex-col items-center justify-between py-20 px-10">
+
+  <!-- Topo: Ícone + Título -->
+  <div class="flex flex-col items-center gap-20">
+    <!-- Ícone senha -->
+     <span class="bg-white p-5 rounded-full shadow-md">
+         <img src="icons/ticket.svg" alt="" class="w-10">
+     </span>
+    <h1 class="text-5xl font-black text-blue-600 uppercase tracking-widest text-center">Retire sua Senha</h1>
+  </div>
+
+  <!-- Botões de tipo de senha -->
+  <div class="flex flex-col gap-15 w-full max-w-3xl">
+
+    <!-- Normal -->
+    <button class="flex items-center justify-between bg-white rounded-3xl shadow-xl px-10 py-8 active:scale-95 transition-transform">
+      <div class="flex items-center gap-6">
+        <span class="bg-blue-50  rounded-full p-5">
+            <img src="icons/user.svg" alt="" class="w-18">
+        </span>
+        <span class="text-5xl font-bold text-blue-600 border-l-gray-100 border-l-2 pl-5">Normal</span>
+      </div>
+      <img src="icons/arrow-blue.svg" alt="" class="w-10">
+    </button>
+
+    <!-- Preferencial -->
+    <button class="flex items-center justify-between bg-white rounded-3xl shadow-xl px-10 py-8 active:scale-95 transition-transform">
+      <div class="flex items-center gap-6">
+        <span class="bg-blue-50  rounded-full p-5">
+            <img src="icons/old.svg" alt="" class="w-18">
+        </span>
+        <span class="text-5xl font-bold text-blue-600">Preferencial</span>
+      </div>
+      <img src="icons/arrow-blue.svg" alt="" class="w-10">
+    </button>
+
+    <!-- Emergencial -->
+    <button class="flex items-center justify-between bg-white rounded-3xl shadow-lg px-10 py-8 active:scale-95 transition-transform">
+      <div class="flex items-center gap-6">
+        <span class="bg-red-100  rounded-full p-5">
+            <img src="icons/siren.svg" alt="" class="w-18">
+        </span>
+        <span class="text-5xl font-bold text-red-500">Emergencial</span>
+      </div>
+      <img src="icons/arrow-red.svg" alt="" class="w-10">
+    </button>
+
+  </div>
+
+  <!-- Rodapé: Toque para imprimir -->
+  <div class="flex flex-col items-center gap-4">
+   <img src="icons/touch.svg" alt="" class="w-15">
+    <span class="text-xl font-semibold text-blue-600 uppercase tracking-widest">Toque para Imprimir</span>
+  </div>
+
+</div>
