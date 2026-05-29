@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Router, RouterOutlet } from '@angular/router';
+import { Auth } from '../../services/auth';
 
 @Component({
   selector: 'app-layout',
@@ -7,4 +8,20 @@ import { RouterOutlet } from '@angular/router';
   templateUrl: './layout.html',
   styleUrl: './layout.css',
 })
-export class Layout {}
+export class Layout {
+
+  public user: any;
+
+  constructor(
+    private auth: Auth
+  ){}
+  ngOnInit(){
+    this.user = JSON.parse(this.auth.getUser()!);
+    console.log(this.user);
+  }
+
+  public logout(){
+    this.auth.logout();
+  }
+  
+}

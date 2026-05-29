@@ -5,6 +5,7 @@ import { Observable, tap } from 'rxjs';
 
 export interface AuthResponse {
   token:string;
+  user:any;
 }
 
 export interface LoginDTO{
@@ -28,18 +29,24 @@ export class Auth {
     return this.http.post<AuthResponse>(this.url, {email, password})
     .pipe(
       tap( response => {
+        console.log(response);
         localStorage.setItem('token', response.token);
+        localStorage.setItem('user', JSON.stringify(response.user));
       })
     );
   }
 
   logout(){
-    localStorage.getItem('token');
+    localStorage.removeItem('token');
     this.router.navigate(['/login']);
   }
 
   getToken(){
     return localStorage.getItem('token');
+  }
+
+  getUser(){
+    return localStorage.getItem('user');
   }
 
   isLoggedIn(){
