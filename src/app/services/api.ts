@@ -6,11 +6,15 @@ import { Injectable } from '@angular/core';
 })
 export class Api {
 
-  private url =  "http://localhost:5210/api/";
+  private url =  "http://localhost:5210/api";
   
   constructor(
     private http: HttpClient,
   ){}
+
+  public createUser(data:any){
+    return this.http.post(`${this.url}/user`, data);
+  }
 
   // public create(idUser: number){
   //   return this.http.post(`${this.url}/ticket`, {idUser})

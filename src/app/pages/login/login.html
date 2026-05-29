@@ -12,7 +12,7 @@
             </div>
         </div>
 
-        <form class="flex flex-col gap-4" (ngSubmit)="login()">
+        <form [formGroup]="form" (ngSubmit)="login()" class="flex flex-col gap-4">
 
             <div class="flex flex-col gap-1.5">
                 <label class="text-sm font-semibold text-gray-600">E-mail</label>
