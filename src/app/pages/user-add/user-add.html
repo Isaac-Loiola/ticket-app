@@ -1,0 +1,85 @@
+<div class="flex justify-between items-center">
+    <h2 class="font-semibold text-xl xl:text-2xl">Novo Usuário</h2>
+</div>
+
+<div class="flex-1 flex items-start">
+    <div class="bg-white rounded-3xl border-2 border-gray-200 p-8 xl:p-10 w-full max-w-sm xl:max-w-md flex flex-col gap-6">
+
+        <form [formGroup]="form" (ngSubmit)="submit()" class="flex flex-col gap-5">
+
+            <!-- Nome -->
+            <div class="flex flex-col gap-1.5">
+                <label class="text-sm font-semibold text-gray-600">Nome</label>
+                <div class="flex items-center gap-3 border-2 border-gray-200 rounded-xl px-4 py-3 focus-within:border-blue-500 duration-150">
+                    <img src="icons/user.svg" alt="" class="w-5 shrink-0">
+                    <input
+                        formControlName="nome"
+                        type="text"
+                        placeholder="Digite o nome completo"
+                        class="flex-1 text-sm outline-none text-gray-700 placeholder-gray-300 bg-transparent"
+                    >
+                </div>
+            </div>
+
+            <!-- E-mail -->
+            <div class="flex flex-col gap-1.5">
+                <label class="text-sm font-semibold text-gray-600">E-mail</label>
+                <div class="flex items-center gap-3 border-2 border-gray-200 rounded-xl px-4 py-3 focus-within:border-blue-500 duration-150">
+                    <img src="icons/user.svg" alt="" class="w-5 shrink-0">
+                    <input
+                        formControlName="email"
+                        type="text"
+                        placeholder="Digite o e-mail"
+                        class="flex-1 text-sm outline-none text-gray-700 placeholder-gray-300 bg-transparent"
+                    >
+                </div>
+            </div>
+
+            <!-- Senha -->
+            <div class="flex flex-col gap-1.5">
+                <label class="text-sm font-semibold text-gray-600">Senha</label>
+                <div class="flex items-center gap-3 border-2 border-gray-200 rounded-xl px-4 py-3 focus-within:border-blue-500 duration-150">
+                    <img src="icons/password.svg" alt="" class="w-5 shrink-0">
+                    <input
+                        formControlName="senha"
+                        type="password"
+                        placeholder="Digite a senha"
+                        class="flex-1 text-sm outline-none text-gray-700 placeholder-gray-300 bg-transparent"
+                    >
+                </div>
+            </div>
+
+            <!-- Setor -->
+            <div class="flex flex-col gap-2.5">
+                <label class="text-sm font-semibold text-gray-600">Setor</label>
+                <div class="grid grid-cols-2 gap-2.5">
+                    @for (setor of setores; track setor.value) {
+                        <label class="cursor-pointer">
+                            <input
+                                type="radio"
+                                formControlName="setor"
+                                [value]="setor.value"
+                                class="sr-only peer"
+                            >
+                            <span class="flex items-center justify-center px-4 py-3 rounded-xl border-2 border-gray-200 text-sm font-medium text-gray-500 duration-150
+                                         peer-checked:border-blue-500 peer-checked:bg-blue-50 peer-checked:text-blue-700">
+                                {{ setor.label }}
+                            </span>
+                        </label>
+                    }
+                </div>
+            </div>
+
+            <!-- Submit -->
+            <button
+                type="submit"
+                [disabled]="form.invalid"
+                class="mt-2 bg-blue-600 text-white font-semibold text-sm xl:text-base py-3.5 rounded-full active:scale-95 duration-100 disabled:opacity-40 disabled:cursor-not-allowed"
+            >
+                Criar Usuário
+            </button>
+
+        </form>
+
+    </div>
+</div>

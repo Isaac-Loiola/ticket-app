@@ -1,0 +1,51 @@
+<div class="min-h-screen bg-gray-100 flex gap-4 xl:gap-8 p-4 xl:p-10">
+
+    <!-- Lateral menu -->
+    <aside class="bg-white flex flex-col justify-between px-5 xl:px-6 py-6 xl:py-8 rounded-3xl border-2 border-gray-200 w-64 xl:w-72 shrink-0">
+
+        <div class="flex flex-col gap-15">
+            <div class="flex items-center gap-3">
+                <img src="icons/team.svg" alt="" class="w-9 xl:w-10 p-2 bg-blue-600 rounded-xl shrink-0">
+                <span class="font-semibold text-base xl:text-lg leading-tight">
+                    Atendimento
+                </span>
+            </div>
+
+            <nav class="flex flex-col gap-2">
+                <div class="px-4 py-3 xl:py-4 bg-blue-50 rounded-xl active:scale-95 duration-150 cursor-pointer">
+                    <a href="/call" class="flex items-center gap-2 text-sm xl:text-base font-medium text-blue-700">
+                        <img src="icons/ticket.svg" alt="" class="w-5 xl:w-6 shrink-0">
+                        Painel
+                    </a>
+                </div>
+                <div class="px-4 py-3 xl:py-4 bg-blue-50 rounded-xl active:scale-95 duration-150 cursor-pointer">
+                    <a href="/new-user" class="flex items-center gap-2 text-sm xl:text-base font-medium text-blue-700">
+                        <img src="icons/plus.svg" alt="" class="w-5 xl:w-6 shrink-0">
+                        Novo
+
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="bg-gray-50 border border-gray-200 rounded-xl">
+            <div class="py-3 xl:py-4 px-3 xl:px-4 flex items-center gap-3 border-b border-gray-200">
+                <img src="icons/user.svg" alt="" class="w-9 p-2 bg-blue-100 rounded-full shrink-0">
+                <div class="flex flex-col min-w-0">
+                    <span class="text-xs text-gray-400">Chamando</span>
+                    <span class="font-semibold text-sm xl:text-base truncate">Larrisa França</span>
+                    <span class="text-xs text-gray-500">Setor: <span class="text-blue-600 font-semibold">Clinica Geral</span></span>
+                </div>
+            </div>
+            <a href="" class="py-3 xl:py-4 px-3 xl:px-4 flex items-center gap-2">
+                <img src="icons/logout.svg" alt="" class="w-5 shrink-0">
+                <span class="text-sm font-semibold text-gray-500">Sair</span>
+            </a>
+        </div>
+
+    </aside>
+
+    <main class="flex-1 bg-white/50 flex flex-col px-6 xl:px-10 py-6 xl:py-8 rounded-3xl min-w-0 gap-6 xl:gap-8">
+        <router-outlet></router-outlet>
+    </main>
+</div>

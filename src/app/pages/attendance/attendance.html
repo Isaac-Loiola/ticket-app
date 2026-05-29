@@ -1,116 +1,61 @@
-<div class="min-h-screen bg-gray-100 flex gap-4 xl:gap-8 p-4 xl:p-10">
-
-    <!-- Lateral menu -->
-    <aside class="bg-white flex flex-col justify-between px-5 xl:px-6 py-6 xl:py-8 rounded-3xl border-2 border-gray-200 w-64 xl:w-72 shrink-0">
-
-        <div class="flex flex-col gap-15">
-            <div class="flex items-center gap-3">
-                <img src="icons/team.svg" alt="" class="w-9 xl:w-10 p-2 bg-blue-600 rounded-xl shrink-0">
-                <span class="font-semibold text-base xl:text-lg leading-tight">
-                    Atendimento
-                </span>
-            </div>
-
-            <nav class="flex flex-col gap-2">
-                <div class="px-4 py-3 xl:py-4 bg-blue-50 rounded-xl active:scale-95 duration-150 cursor-pointer">
-                    <a href="/call" class="flex items-center gap-2 text-sm xl:text-base font-medium text-blue-700">
-                        <img src="icons/plus.svg" alt="" class="w-5 xl:w-6 shrink-0">
-                        Painel
-                    </a>
-                </div>
-            </nav>
+<div class="flex justify-between items-center">
+    <section class="flex gap-4 items-center">
+        <h2 class="font-semibold text-xl xl:text-2xl">Sala 05</h2>
+        <div class="flex gap-2 items-center">
+            <span class="w-2 h-2 animate-pulse bg-blue-600 rounded-full"></span>
+            <span class="text-blue-600 text-sm font-semibold">Ativo</span>
         </div>
+    </section>
+    <span class="text-xs font-semibold text-gray-500 px-4 py-2 border border-gray-200 rounded-2xl bg-white">
+        28/05/2026
+    </span>
+</div>
 
-        <div class="bg-gray-50 border border-gray-200 rounded-xl">
-            <div class="py-3 xl:py-4 px-3 xl:px-4 flex items-center gap-3 border-b border-gray-200">
-                <img src="icons/user.svg" alt="" class="w-9 p-2 bg-blue-100 rounded-full shrink-0">
-                <div class="flex flex-col min-w-0">
-                    <span class="text-xs text-gray-400">Chamando</span>
-                    <span class="font-semibold text-sm xl:text-base truncate">Larrisa França</span>
-                    <span class="text-xs text-gray-500">Setor: <span class="text-blue-600 font-semibold">Clinica Geral</span></span>
-                </div>
-            </div>
-            <a href="" class="py-3 xl:py-4 px-3 xl:px-4 flex items-center gap-2">
-                <img src="icons/logout.svg" alt="" class="w-5 shrink-0">
-                <span class="text-sm font-semibold text-gray-500">Sair</span>
-            </a>
+<div class="flex-1 flex flex-col lg:flex-row gap-4 xl:gap-6 min-h-0">
+
+    <div class="flex-1 rounded-3xl border-2 bg-white border-gray-200 p-6 xl:p-10 flex flex-col min-w-0">
+        <h3 class="font-semibold text-blue-600 pb-3 border-b-2 border-gray-100 mb-6 xl:mb-8">
+            Em Atendimento
+        </h3>
+        <div class="flex flex-col flex-1 items-center justify-between py-4 xl:py-8 gap-6">
+            <p class="text-xs font-semibold text-gray-400 uppercase tracking-widest">Senha Atual</p>
+            <h1 class="text-7xl xl:text-8xl font-bold tracking-tight">N102</h1>
+            <button class="bg-blue-600 w-full max-w-xs xl:max-w-sm py-4 text-white font-semibold rounded-full active:scale-95 duration-100 text-sm xl:text-base">
+                FINALIZAR ATENDIMENTO
+            </button>
         </div>
+    </div>
 
-    </aside>
-
-    <main class="flex-1 bg-white/50 flex flex-col px-6 xl:px-10 py-6 xl:py-8 rounded-3xl min-w-0 gap-6 xl:gap-8">
-
-        <div class="flex justify-between items-center">
-            <section class="flex gap-4 items-center">
-                <h2 class="font-semibold text-xl xl:text-2xl">Sala 05</h2>
-                <div class="flex gap-2 items-center">
-                    <span class="w-2 h-2 animate-pulse bg-blue-600 rounded-full"></span>
-                    <span class="text-blue-600 text-sm font-semibold">Ativo</span>
-                </div>
-            </section>
-            <span class="text-xs font-semibold text-gray-500 px-4 py-2 border border-gray-200 rounded-2xl bg-white">
-                28/05/2026
-            </span>
-        </div>
-
-        <div class="flex-1 flex flex-col lg:flex-row gap-4 xl:gap-6 min-h-0">
-
-            <div class="flex-1 rounded-3xl border-2 bg-white border-gray-200 p-6 xl:p-10 flex flex-col min-w-0">
-                <h3 class="font-semibold text-blue-600 pb-3 border-b-2 border-gray-100 mb-6 xl:mb-8">
-                    Em Atendimento
-                </h3>
-                <div class="flex flex-col flex-1 items-center justify-between py-4 xl:py-8 gap-6">
-                    <p class="text-xs font-semibold text-gray-400 uppercase tracking-widest">Senha Atual</p>
-                    <h1 class="text-7xl xl:text-8xl font-bold tracking-tight">N102</h1>
-                    <button class="bg-blue-600 w-full max-w-xs xl:max-w-sm py-4 text-white font-semibold rounded-full active:scale-95 duration-100 text-sm xl:text-base">
-                        FINALIZAR ATENDIMENTO
-                    </button>
-                </div>
+    <div class="w-full lg:w-56 xl:w-68 shrink-0 rounded-3xl border-2 bg-white border-gray-200 p-6 xl:p-8 flex flex-col">
+        <h3 class="font-semibold text-blue-600 pb-3 border-b-2 border-gray-100 mb-4">
+            Últimas Senhas
+        </h3>
+        <div class="flex flex-col gap-5 overflow-y-auto">
+            <div class="flex items-center justify-between px-4 py-3 border border-gray-100 rounded-xl">
+                <span class="font-bold text-base">N101</span>
+                <span class="text-xs font-semibold text-gray-400 bg-white border border-gray-200 px-3 py-1 rounded-full">Finalizado</span>
             </div>
-
-            <div class="w-full lg:w-56 xl:w-68 shrink-0 rounded-3xl border-2 bg-white border-gray-200 p-6 xl:p-8 flex flex-col">
-                <h3 class="font-semibold text-blue-600 pb-3 border-b-2 border-gray-100 mb-4">
-                    Últimas Senhas
-                </h3>
-                <div class="flex flex-col gap-5 overflow-y-auto">
-                    <div class="flex items-center justify-between px-4 py-3 border border-gray-100 rounded-xl">
-                        <span class="font-bold text-base">N101</span>
-                        <span class="text-xs font-semibold text-gray-400 bg-white border border-gray-200 px-3 py-1 rounded-full">Finalizado</span>
-                    </div>
-                    <div class="flex items-center justify-between px-4 py-3 border border-gray-100 rounded-xl">
-                        <span class="font-bold text-base">N100</span>
-                        <span class="text-xs font-semibold text-gray-400 bg-white border border-gray-200 px-3 py-1 rounded-full">Finalizado</span>
-                    </div>
-                    <div class="flex items-center justify-between px-4 py-3 border border-gray-100 rounded-xl">
-                        <span class="font-bold text-base">N099</span>
-                        <span class="text-xs font-semibold text-gray-400 bg-white border border-gray-200 px-3 py-1 rounded-full">Finalizado</span>
-                    </div>
-                    <div class="flex items-center justify-between px-4 py-3 border border-gray-100 rounded-xl">
-                        <span class="font-bold text-base">N098</span>
-                        <span class="text-xs font-semibold text-gray-400 bg-white border border-gray-200 px-3 py-1 rounded-full">Finalizado</span>
-                    </div>
-                    <div class="flex items-center justify-between px-4 py-3 border border-gray-100 rounded-xl">
-                        <span class="font-bold text-base">N097</span>
-                        <span class="text-xs font-semibold text-gray-400 bg-white border border-gray-200 px-3 py-1 rounded-full">Finalizado</span>
-                    </div>
-                    <div class="flex items-center justify-between px-4 py-3 border border-gray-100 rounded-xl">
-                        <span class="font-bold text-base">N096</span>
-                        <span class="text-xs font-semibold text-gray-400 bg-white border border-gray-200 px-3 py-1 rounded-full">Finalizado</span>
-                    </div>
-                    <div class="flex items-center justify-between px-4 py-3 border border-gray-100 rounded-xl">
-                        <span class="font-bold text-base">N096</span>
-                        <span class="text-xs font-semibold text-gray-400 bg-white border border-gray-200 px-3 py-1 rounded-full">Finalizado</span>
-                    </div>
-                    <div class="flex items-center justify-between px-4 py-3 border border-gray-100 rounded-xl">
-                        <span class="font-bold text-base">N096</span>
-                        <span class="text-xs font-semibold text-gray-400 bg-white border border-gray-200 px-3 py-1 rounded-full">Finalizado</span>
-                    </div>
-                    
-                </div>
+            <div class="flex items-center justify-between px-4 py-3 border border-gray-100 rounded-xl">
+                <span class="font-bold text-base">N100</span>
+                <span class="text-xs font-semibold text-gray-400 bg-white border border-gray-200 px-3 py-1 rounded-full">Finalizado</span>
             </div>
-
+            <div class="flex items-center justify-between px-4 py-3 border border-gray-100 rounded-xl">
+                <span class="font-bold text-base">N099</span>
+                <span class="text-xs font-semibold text-gray-400 bg-white border border-gray-200 px-3 py-1 rounded-full">Finalizado</span>
+            </div>
+            <div class="flex items-center justify-between px-4 py-3 border border-gray-100 rounded-xl">
+                <span class="font-bold text-base">N098</span>
+                <span class="text-xs font-semibold text-gray-400 bg-white border border-gray-200 px-3 py-1 rounded-full">Finalizado</span>
+            </div>
+            <div class="flex items-center justify-between px-4 py-3 border border-gray-100 rounded-xl">
+                <span class="font-bold text-base">N097</span>
+                <span class="text-xs font-semibold text-gray-400 bg-white border border-gray-200 px-3 py-1 rounded-full">Finalizado</span>
+            </div>
+            <div class="flex items-center justify-between px-4 py-3 border border-gray-100 rounded-xl">
+                <span class="font-bold text-base">N096</span>
+                <span class="text-xs font-semibold text-gray-400 bg-white border border-gray-200 px-3 py-1 rounded-full">Finalizado</span>
+            </div>
         </div>
-
-    </main>
+    </div>
 
 </div>
