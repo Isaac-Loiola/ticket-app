@@ -16,6 +16,18 @@ export class Api {
     return this.http.post(`${this.url}/user`, data);
   }
 
+  public createTicket(data:any){
+    return this.http.post(`${this.url}/ticket`,  data);
+  }
+
+  public callTicket(data:any){
+      return this.http.post(`${this.url}/ticket/call`, data);
+  }
+
+  public finishedTicket(id:number){
+    return this.http.put(`${this.url}`, id);
+  }
+
   // public create(idUser: number){
   //   return this.http.post(`${this.url}/ticket`, {idUser})
   // }
