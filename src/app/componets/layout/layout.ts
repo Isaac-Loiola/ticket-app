@@ -17,7 +17,6 @@ export class Layout {
   ){}
   ngOnInit(){
     this.user = JSON.parse(this.auth.getUser()!);
-    console.log(this.user);
   }
 
   public logout(){

@@ -29,7 +29,6 @@ export class Auth {
     return this.http.post<AuthResponse>(this.url, {email, password})
     .pipe(
       tap( response => {
-        console.log(response);
         localStorage.setItem('token', response.token);
         localStorage.setItem('user', JSON.stringify(response.user));
       })
