@@ -10,6 +10,8 @@ import { tick } from '@angular/core/testing';
   styleUrl: './panel.css',
 })
 export class Panel {
+  showModal = true; 
+  
   constructor(
     public panelService: PanelService
   ){
@@ -60,15 +62,16 @@ async playSound(ticket: Ticket){
       await this.playAudio('audios/preferential.mp3');
       await this.playAudio('audios/ticket.mp3');
       for(const char of ticket.code){
+        console.log(char);
         await this.playAudio(`audios/${char.toLowerCase()}.mp3`);
       }
-
       break;
 
     case 'normal':
       await this.playAudio('audios/normal.mp3');
       await this.playAudio('audios/ticket.mp3');
       for(const char of ticket.code){
+        console.log(char);
         await this.playAudio(`audios/${char.toLowerCase()}.mp3`);
       }
       break;
@@ -77,9 +80,15 @@ async playSound(ticket: Ticket){
       await this.playAudio('audios/emergency.mp3');
       await this.playAudio('audios/ticket.mp3');
       for(const char of ticket.code){
+        console.log(char);
         await this.playAudio(`audios/${char.toLowerCase()}.mp3`);
       }
       break;
     }
+  }
+  startPanel() {                                                                                                                             
+    this.showModal = false;
+    const audio = new Audio();
+    audio.play();                                                                                                                  
   }
 }
