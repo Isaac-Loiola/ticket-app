@@ -38,11 +38,8 @@ export class UserAdd {
       ...this.form.value
     }).subscribe({
       next: () =>{
-        console.log('User added successfully')
+        this.form.reset;
       },
-      error: () =>{
-        console.log('Error to add user')
-      }
     })
     console.log(this.form.value);
   }

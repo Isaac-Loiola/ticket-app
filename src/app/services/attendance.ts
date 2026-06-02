@@ -1,23 +1,27 @@
 import { Injectable, signal } from '@angular/core';
-import { tick } from '@angular/core/testing';
 import { Ticket } from '../interfaces/ticket';
+
+const STORAGE_KEY = 'currentTicket';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AttendanceService {
-  currentTicket = signal<Ticket | null>(null);
+  currentTicket = signal<Ticket | null>(
+    JSON.parse(localStorage.getItem(STORAGE_KEY) ?? 'null')
+  );
 
-  public setTicket(ticket:any){
+  public setTicket(ticket: Ticket) {
     this.currentTicket.set(ticket);
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(ticket));
   }
 
-  public clearTicekt(){
+  public clearTicket() {
     this.currentTicket.set(null);
+    localStorage.removeItem(STORAGE_KEY);
   }
 
-  public hasTicket(){
+  public hasTicket() {
     return this.currentTicket() !== null;
   }
-
 }

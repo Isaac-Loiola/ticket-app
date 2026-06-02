@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Ticket } from '../interfaces/ticket';
 
 @Injectable({
   providedIn: 'root',
@@ -21,11 +22,11 @@ export class Api {
   }
 
   public callTicket(data:any){
-      return this.http.post(`${this.url}/ticket/call`, data);
+    return this.http.post<Ticket>(`${this.url}/ticket/call`, data);
   }
 
   public finishedTicket(id:number){
-    return this.http.put(`${this.url}`, id);
+    return this.http.put(`${this.url}/ticket/${id}`,{});
   }
 
   // public create(idUser: number){
