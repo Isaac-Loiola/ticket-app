@@ -5,6 +5,7 @@ import { Layout } from "../../componets/layout/layout";
 import { Api } from '../../services/api';
 import { Auth } from '../../services/auth';
 import { Ticket } from '../../interfaces/ticket';
+import { TouchedChangeEvent } from '@angular/forms';
 
 @Component({
   selector: 'app-attendance',
@@ -22,6 +23,8 @@ export class Attendance {
 
   readonly ticket = this.attService.currentTicket;
   readonly emptyQueueToast = signal(false);
+
+  readonly today = new Date().toLocaleDateString('pt-BR');
   // readonly tickets = this.attService.nextTickets;
 
   get nextTickets(): Ticket[]{
