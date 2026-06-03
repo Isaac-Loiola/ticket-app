@@ -22,11 +22,15 @@ export class Api {
   }
 
   public callTicket(data:any){
-    return this.http.post<Ticket>(`${this.url}/ticket/call`, data);
+    return this.http.post(`${this.url}/ticket/call`, data);
   }
 
   public finishedTicket(id:number){
     return this.http.put(`${this.url}/ticket/${id}`,{});
+  }
+
+  getNextTickets(sector: string) {
+    return this.http.get<Ticket[]>(`${this.url}/ticket/next?sector=${sector}`);
   }
 
   // public create(idUser: number){
