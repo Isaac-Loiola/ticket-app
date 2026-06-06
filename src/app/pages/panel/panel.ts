@@ -47,48 +47,51 @@ export class Panel {
   }
 
   playAudio(src: string): Promise<void> {
-  return new Promise((resolve) => {
-    const audio = new Audio(src);
-    audio.play();
-    audio.onended = () => resolve();
-  });
-}
-
-async playSound(ticket: Ticket){
-  await this.playAudio('audios/notify.mp3');
-  
-  switch(ticket.type){
-    case 'preferential':
-      await this.playAudio('audios/preferential.mp3');
-      await this.playAudio('audios/ticket.mp3');
-      for(const char of ticket.code){
-        console.log(char);
-        await this.playAudio(`audios/${char.toLowerCase()}.mp3`);
-      }
-      break;
-
-    case 'normal':
-      await this.playAudio('audios/normal.mp3');
-      await this.playAudio('audios/ticket.mp3');
-      for(const char of ticket.code){
-        console.log(char);
-        await this.playAudio(`audios/${char.toLowerCase()}.mp3`);
-      }
-      break;
-
-    case 'emergency':
-      await this.playAudio('audios/emergency.mp3');
-      await this.playAudio('audios/ticket.mp3');
-      for(const char of ticket.code){
-        console.log(char);
-        await this.playAudio(`audios/${char.toLowerCase()}.mp3`);
-      }
-      break;
-    }
+    return new Promise((resolve) => {
+      const audio = new Audio(src);
+      audio.play();
+      audio.onended = () => resolve();
+    });
   }
-  startPanel() {                                                                                                                             
-    this.showModal = false;
-    const audio = new Audio();
-    audio.play();                                                                                                                  
+  // buildSequence(code: string): string[]{
+  //   const files: string[] = [];
+  // }
+
+  async playSound(ticket: Ticket){
+    await this.playAudio('audios/notify.mp3');
+    
+    switch(ticket.type){
+      case 'preferential':
+        await this.playAudio('audios/preferential.mp3');
+        await this.playAudio('audios/ticket.mp3');
+        for(const char of ticket.code){
+          console.log(char);
+          await this.playAudio(`audios/${char.toLowerCase()}.mp3`);
+        }
+        break;
+
+      case 'normal':
+        await this.playAudio('audios/normal.mp3');
+        await this.playAudio('audios/ticket.mp3');
+        for(const char of ticket.code){
+          console.log(char);
+          await this.playAudio(`audios/${char.toLowerCase()}.mp3`);
+        }
+        break;
+
+      case 'emergency':
+        await this.playAudio('audios/emergency.mp3');
+        await this.playAudio('audios/ticket.mp3');
+        for(const char of ticket.code){
+          console.log(char);
+          await this.playAudio(`audios/${char.toLowerCase()}.mp3`);
+        }
+        break;
+      }
+    }
+    startPanel() {                                                                                                                             
+      this.showModal = false;
+      const audio = new Audio();
+      audio.play();                                                                                                                  
   }
 }
