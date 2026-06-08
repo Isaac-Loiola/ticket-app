@@ -22,6 +22,10 @@ This frontend serves three different interfaces for the attendance system:
 
 ## 🖥️ Screenshots
 
+### Login
+> <img width="1892" height="923" alt="Captura de tela 2026-06-08 005914" src="https://github.com/user-attachments/assets/1612ca25-86da-4584-b269-2e618b58199b" />
+
+
 ### Panel
 > <img width="1905" height="935" alt="Captura de tela 2026-06-08 004732" src="https://github.com/user-attachments/assets/ea37431d-562b-42d9-b434-e892e2c6e90d" />
 
