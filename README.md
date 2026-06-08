@@ -22,14 +22,14 @@ This frontend serves three different interfaces for the attendance system:
 
 ## 🖥️ Screenshots
 
-### Totem
-> <!-- Add totem screenshot here -->
+### Panel
+> <img width="1905" height="935" alt="Captura de tela 2026-06-08 004732" src="https://github.com/user-attachments/assets/ea37431d-562b-42d9-b434-e892e2c6e90d" />
 
 ### Attendance
-> <!-- Add attendance screenshot here -->
+> <img width="1893" height="923" alt="Captura de tela 2026-06-08 005854" src="https://github.com/user-attachments/assets/2e6d1cae-8020-41e6-abcf-10e500096872" />
 
-### Panel
-> <!-- Add panel screenshot here -->
+### Totem
+> <img width="1058" height="1759" alt="Captura de tela 2026-06-08 010112" src="https://github.com/user-attachments/assets/bccb7767-5fe0-4769-a0a7-ff305fc00f0d" />
 
 ---
 
@@ -40,6 +40,7 @@ This frontend serves three different interfaces for the attendance system:
 - Route Guards — protects authenticated pages
 - Real-time ticket queue updates via **SignalR WebSocket**
 - Audio announcements when a ticket is called (sequential `.mp3` playback)
+
 - Smart number-to-audio conversion (handles teens 11–19, hundreds, "cento" vs "cem")
 - Ticket state persisted in `localStorage` — survives page refresh
 - Reactive state management with Angular **Signals**
